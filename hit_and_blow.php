@@ -54,8 +54,10 @@
                         $hit_index = $k;
                     }
                     for($n = 0; $n < 3; $n++){
-                        if ($answer[$n] == $check[$h]){
-                            $blow += 1;
+                        if ($n != $hit_index){
+                            if ($answer[$k] == $check[$n]){
+                                $blow += 1;
+                            }
                         }
                     }
                 }
@@ -64,14 +66,6 @@
                     echo "正解です！" . $count . "回目でクリアです！！\n";
                     break;
                 }
-                /*
-                for ($n = 0; $n < 3; $n++){//Blow数カウント
-                    for ($h = 0; $h < 3; $h++){
-                        if ($answer[$n] == $check[$h]){
-                            $blow += 1;
-                        }
-                    }
-                }*/
                 
                 echo "Hit：" . $hit . " Blow：" . $blow . "です。\n";
                 $count++;
