@@ -29,6 +29,11 @@ Route::post('/listing/edit','ListingsController@update');
 //リスト削除処理
 Route::get('/listingsdelete/{id}','ListingsController@destory');
 
+//カードの新規作成
+Route::get('/listing/{id}/card/new', 'CardsController@new');
+
+//カードの新規作成処理
+Route::post('/cards','CardsController@store');
 
 Auth::routes();
 

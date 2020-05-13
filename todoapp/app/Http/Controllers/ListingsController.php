@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Listing;
+use App\Card;
 use Auth;
 use Validator;
 
@@ -21,10 +22,8 @@ class ListingsController extends Controller
         $listings = Listing::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'asc')
             ->get();
-        
-        $cards = Card::
             
-        return view('listing/index', ['listings' => $listings, 'Card' => ]);
+        return view('listing/index', ['listings' => $listings]);
     }
     
     public function new()
