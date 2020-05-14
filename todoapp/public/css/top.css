@@ -39,6 +39,7 @@
 .topPage .listWrapper .list .cardWrapper {
   overflow-y: scroll;
   max-height: 76vh;
+  position: relative;
 }
 .topPage .listWrapper .list .cardWrapper .cardDetail_link {
   text-decoration: none;

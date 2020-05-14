@@ -38,12 +38,13 @@
       .cardWrapper {
         overflow-y: scroll;
         max-height: 76vh;
+        position: relative;
         .cardDetail_link {
           text-decoration: none;
           color: #323232;
         }
         .card {
-          position:relative;
+          position: relative;
           display:flex;
           flex-direction:column;
           min-width:0;

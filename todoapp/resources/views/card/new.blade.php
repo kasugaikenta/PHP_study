@@ -18,19 +18,15 @@
     <div class="form-group"> 
       <label for="card" class="col-sm-3 control-label">メモ</label> 
       <div class="col-sm-6"> 
-        <input type="text" name="card_memo" class="form-control" value="{{ old('card_memo') }}">
+        <textarea name="card_memo" rows="4" cols="40" class = "form-control" value = "{{ old('card_memo') }}"></textarea>
       </div>
-    </div>
-    
-    <div class = "form-group">
-      <label for="listing"></label>
       <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
     </div>
     
-    <div class="form-group"> 
+    <div class = "form-group"> 
       <div class="col-sm-offset-3 col-sm-6"> 
-        <button type="submit" class="btn btn-default">
-        <i class="glyphicon glyphicon-plus"></i> 作成 </button> 
+        <button type="submit"class = "card-create-button">
+        <i></i> 作成する </button> 
       </div>
     </div>
   </form>

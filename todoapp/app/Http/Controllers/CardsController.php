@@ -12,13 +12,15 @@ use Illuminate\Http\Request;
 class CardsController extends Controller
 {
     //
-    public function new(int $listing_id){
-        return view('card/new',['listing'=>$listing_id]);
+    public function new($listing_id){
+        
+        $listing_data = Listing::find($listing_id);
+        return view('card/new',['listing' => $listing_data]);
     }
     
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all() ,['card_name' => 'required|max:255', ]);
+        $validator = Validator::make($request->all() ,['card_name' => 'required|max:255', 'card_memo' => 'required']);
         
         if ($validator->fails())
         {
@@ -33,5 +35,25 @@ class CardsController extends Controller
         
         return redirect('/');
         
+    }
+    
+    public function show($listing_id, $card_id){
+        $listing_data = Listing::find($listing_id);
+        $card_data = Card::find($card_id);
+        
+        return view('card/show',['listing' => $listing_data],['card' => $card_data]);
+    }
+    
+    public function edit($card_id){
+        $card_data = Card::find($card_id);
+        return view('card/edit', ['card' => $card_data]);
+    }
+    
+    public function destory($card_id)
+    {
+        $card = Card::find($card_id);
+        $card->delete();
+        
+        return redirect('/');
     }
 }

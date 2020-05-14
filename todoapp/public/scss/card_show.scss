@@ -1,0 +1,36 @@
+.card-detail{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20%;
+    .title-area{
+        margin-bottom: 30px;
+    }
+    .memo-area{
+        margin-bottom: 30px;
+    }
+}
+
+.card-edit-button{
+    margin-left: 28%;
+    margin-bottom: 40px;
+    width: 40%;
+    height: 40px;
+    color: white;
+    background-color: #026aa7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+}
+    
+.card-delete-button{
+    margin-left: 28%;
+    width: 40%;
+    height: 40px;
+    color: white;
+    background-color: #dc143c;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+}
+
+

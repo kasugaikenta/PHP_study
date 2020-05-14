@@ -12,12 +12,8 @@
             <a href="{{ url('/listingsedit', $listing->id) }}"><i class="fas fa-pen"></i></a>
           </div>
         </div>
-      </div>
-      
-      
-      <!--カード表示部分-->
-      
-      <div class="cardWrapper">
+        <!--カード表示部分-->
+        <div class="cardWrapper">
           @foreach ($listing->cards as $card) 
           <a class="cardDetail_link" href="/listing/{{$listing->id}}/card/{{$card->id}}">
             <div class="card">
@@ -31,8 +27,7 @@
             <a class="addCard_link" href="/listing/{{$listing->id}}/card/new">さらにカードを追加</a>
           </div>
         </div>
-        
-        
+      </div>
      @endforeach
   </div>
 </div>

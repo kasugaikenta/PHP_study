@@ -33,7 +33,17 @@ Route::get('/listingsdelete/{id}','ListingsController@destory');
 Route::get('/listing/{id}/card/new', 'CardsController@new');
 
 //カードの新規作成処理
-Route::post('/cards','CardsController@store');
+Route::post('/card/new','CardsController@store');
+
+//カード詳細表示
+Route::get('/listing/{listing_id}/card/{card_id}','CardsController@show');
+
+//カード編集画面
+Route::get('/cardsedit/{card_id}', 'CardsController@edit');
+
+//カード削除処理
+Route::get('/cardsdelete/{card_id}', 'CardsController@destory');
+
 
 Auth::routes();
 
