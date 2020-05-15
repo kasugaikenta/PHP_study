@@ -18,9 +18,26 @@
     <div class="form-group"> 
       <label for="card" class="col-sm-3 control-label">メモ</label> 
       <div class="col-sm-6"> 
-        <textarea name="card_memo" rows="4" cols="40" value="{{ old('card_memo', $card->memo)}}" class = "form-control"></textarea>
+        <textarea name="card_memo" rows="4" cols="80"　class = "form-control">{{$card->memo}}</textarea>
       </div>
       <input type="hidden" name="card_id" value="{{ old('card_id', $card->id) }}">
+    </div>
+    
+    <div class="form-group"> 
+    <!--リスト名-->
+      <label for="card" class="col-sm-3 control-label">リスト名</label> 
+      <div class="col-sm-6"> 
+        <select name="list_name" class = "list_name_form">
+          @foreach($listings as $item)
+            <option value="{{$item->id}}"
+             @if(
+              old('list_name' ,$listing->id) == $item->id) selected
+             @endif
+            >
+             {{$item->title}}</option>
+          @endforeach
+        </select>
+      </div>
     </div>
     
     <div class = "form-group"> 

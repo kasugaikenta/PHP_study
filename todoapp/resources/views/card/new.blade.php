@@ -18,7 +18,7 @@
     <div class="form-group"> 
       <label for="card" class="col-sm-3 control-label">メモ</label> 
       <div class="col-sm-6"> 
-        <textarea name="card_memo" rows="4" cols="40" class = "form-control" value = "{{ old('card_memo') }}"></textarea>
+        <textarea name="card_memo" rows="4" cols="80" class = "form-control" value = "{{ old('card_memo') }}"></textarea>
       </div>
       <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
     </div>

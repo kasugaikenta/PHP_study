@@ -41,6 +41,9 @@ Route::get('/listing/{listing_id}/card/{card_id}','CardsController@show');
 //カード編集画面
 Route::get('/cardsedit/{card_id}', 'CardsController@edit');
 
+//カード更新処理
+Route::post('/card/edit','CardsController@update');
+
 //カード削除処理
 Route::get('/cardsdelete/{card_id}', 'CardsController@destory');
 

@@ -9,7 +9,7 @@
     
     <div class = "memo-area">
         <h4>メモ</h4>
-        <h2>{{$card->memo}}</h2>
+        <textarea rows="4" cols="80" readonly>{{$card->memo}}</textarea>
     </div>
             
     <div class = "list-name-area">
@@ -20,7 +20,7 @@
 <div class="form-group"> 
     <div class="col-sm-offset-3 col-sm-6"> 
     <a href="{{ url('/cardsedit', $card->id)}}">
-         <button type="submit" class="btn card-edit-button">
+         <button type="submit" class="card-edit-button">
             <i></i> 編集する
          </button> 
     </a>
@@ -29,7 +29,7 @@
 <div class="form-group"> 
     <div class="col-sm-offset-3 col-sm-6"> 
     <a onclick="return confirm('{{$card->title}}を削除して大丈夫ですか？')" href="{{ url('/cardsdelete', $card->id)}}">
-         <button type="submit" class="btn card-delete-button">
+         <button type="submit" class="card-delete-button">
             <i></i> 削除する
          </button> 
     </a>
